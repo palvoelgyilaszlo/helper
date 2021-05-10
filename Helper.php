@@ -2,6 +2,7 @@
 
     declare(strict_types = 1);
 
+    namespace Helper;
     class Helper
     {
         public function __construct()
@@ -150,7 +151,7 @@
 
         public static function reflectionClassisUserDefined($className)
         {
-            $class = new ReflectionClass($className);
+            $class = new \ReflectionClass($className);
             self::e($class->isUserDefined());
         }
 
