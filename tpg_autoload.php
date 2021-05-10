@@ -3,7 +3,7 @@
     /**
      * Alle Dateien im Projektordner oberhalb von "/vendor/" werden geladen.
      */
-    $start = __DIR__.'/..';
+    $start = __DIR__;
 
     require_once 'Helper.php';
 
@@ -13,7 +13,10 @@
         '.',
         '..',
         'tpg_autoload.php',
+        'csvdata',
+        'csvdata2',
         '.vscode',
+        'LICENSE',
         '.env',
         '.git',
         '.gitignore',
@@ -39,8 +42,7 @@
     load( $start, $ingnoreArray, $firstArray );
 
     function load( $url, $ingnoreArray = [] , $firstArray = [], $i = 0 )
-    {    
-
+    {
         $folder = scandir( $url. '/' );
 
         $newfolder = [];

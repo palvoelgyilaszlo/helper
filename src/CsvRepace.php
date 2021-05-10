@@ -6,6 +6,7 @@
 
     use Exception;
     use Helper\Helper;
+    use CsvRepace\CsvRepaceInterface;
 
     class CsvRepace implements CsvRepaceInterface
     {
@@ -24,6 +25,7 @@
         public function setDir( string $dir ) : CsvRepace
         {
             $this->dir = $dir;
+            $this->isDir();
             return $this;
         }
 
@@ -68,8 +70,8 @@
 
                         $path_parts = pathinfo( $folder . '/' . $file );
 
-                        if( $path_parts['extension'] != "csv" ){ continue; }
-
+                        if( $path_parts['extension'] ?? null != "csv" ){ continue; }
+                        
                         $contents = file_get_contents( $folder . '/' . $file );
                         $contents = explode( "\n", $contents );
                         $out      = fopen( $folder . '/' . $file, 'w');
@@ -104,7 +106,9 @@
                 'count CSV-Files'   => count(glob( $folder.'/*{.csv}',128)),
                 'ingnore Array'     => $dia,
                 'replace Array'     => $dra,
-                'change folder, ingnore or replace' => "/src/CsvReplaceInterface"
+                'change folder'     => '$this->setDir("XXX")',
+                'change ingnore'    => '$this->setIngnore([ \'.\',\'..\',\'data.csv\',\'data1.csv\',\'original.csv\',\'sicherung\' ])',
+                'change replace'    => '$this->setReplace([ \'";"\',\';"\',\'";\' ])'
             ];
 
             $this->Helper::e( $infoArray );
