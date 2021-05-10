@@ -4,10 +4,16 @@
     "type": "library",
     "license": "MIT",
     "minimum-stability": "dev",
+    "authors": [
+      {
+          "name": "palvoelgyilaszlo",
+          "email": "l.palvoelgyi@gmail.com"
+      }
+    ],
     "require": {},
     "autoload": {
       "psr-4": {
-        "CsvRepace\\": "src/"
+        "Palvoelgyi\\Helper\\": "src/"
       }
     }
 }

@@ -2,7 +2,8 @@
 
     declare(strict_types = 1);
 
-    namespace Helper;
+    namespace Palvoelgyi\Helper;
+
     class Helper
     {
         public function __construct()
