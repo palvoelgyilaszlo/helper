@@ -6,7 +6,7 @@
  Methoden:
 
 # Gibt alles strukturiert und gut lesbar wieder
-    Helper::e();
+    Helper::e($variable);
 # Gibt alle deklarierte Klassen wieder
     Helper::getClasses();
 # Gibt alle Methoden eine Klasse wieder
