@@ -1,0 +1,8 @@
+{
+    "name": "laszlopalvoelgyi/helper",
+    "description": "help for php programming",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {}
+}
