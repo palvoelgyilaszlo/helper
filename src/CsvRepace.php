@@ -12,12 +12,12 @@
         private $dir;
         private $ingnore;
         private $replace;
-        private TpgHelper $Helper;
+        private Helper $Helper;
         private $file;
 
         public function __construct()
         {
-            $this->Helper = new TpgHelper();
+            $this->Helper = new Helper();
             return $this;
         }
 
