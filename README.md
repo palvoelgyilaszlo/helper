@@ -4,9 +4,12 @@
  und gleichzeitig die Position der Ausgabe exakt zu markeiren.
 
  Methoden:
+
+# Gibt alles strukturiert und gut lesbar wieder
+    Helper::e();
 # Gibt alle deklarierte Klassen wieder
     Helper::getClasses();
-# Gibt den Klassenname samt Namespace zurück
+# Gibt alle Methoden eine Klasse wieder
     Helper::getClassMethod('Helper');
 # Gibt den Klassenname samt Namespace zurück
     Helper::getClassName(new Helper);
