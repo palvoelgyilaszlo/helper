@@ -17,3 +17,9 @@
     Helper::getSelfMethodes();
 # Bescheibt einiges über ein Array Objekt
     Helper::arrayObject();
+# Zeitmessung Zeit starten
+    Helper::timeStart();
+# Zeitmessung Zeit stoppen
+    Helper::timeStop();
+# Zeitmessung Dauer ausgeben
+    Helper::getDuration();

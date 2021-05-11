@@ -6,6 +6,9 @@
 
     class Helper
     {
+        private static $start; 
+        private static $duration;
+
         public function __construct()
         {
         }
@@ -200,5 +203,23 @@
             // Get the new flags
             $flags = $fruitsArrayObject->getFlags();
             ');
+        }
+
+        public static function timeStart()
+        {
+            self::$start = microtime(true);
+
+        }
+
+        public static function timeStop()
+        {
+            self::$duration = microtime(true) - self::$start; 
+
+        }
+
+        public static function getDuration()
+        {
+           return self::$duration;
+
         }
     }
