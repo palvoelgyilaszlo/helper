@@ -1,25 +1,25 @@
 # helper
 
- Die Motivation ist die Ausgabe besser sichtbar zu machen 
- und gleichzeitig die Position der Ausgabe exakt zu markeiren.
+The motivation is to make the output more visible
+and at the same time to mark the exact position of the output.
 
- Methoden:
+ Methods:
 
-# Gibt alles strukturiert und gut lesbar wieder
+# Everything is structured and easy to read again
     Helper::e($variable);
-# Gibt alle deklarierte Klassen wieder
+# Returns all declared classes
     Helper::getClasses();
-# Gibt alle Methoden eine Klasse wieder
+# Returns all methods of a class
     Helper::getClassMethod('Helper');
-# Gibt den Klassenname samt Namespace zurück
+# Outputs the class name including namespace
     Helper::getClassName(new Helper);
-# Gibt alle nutzbaren Methoden wieder
+# Returns all methods that can be used
     Helper::getSelfMethodes();
-# Bescheibt einiges über ein Array Objekt
+# Describes something about an array object
     Helper::arrayObject();
-# Zeitmessung Zeit starten
+# Timing. Start time
     Helper::timeStart();
-# Zeitmessung Zeit stoppen
+# Timing. Stop time
     Helper::timeStop();
-# Zeitmessung Dauer ausgeben
+# Output time measurement duration
     Helper::getDuration();
