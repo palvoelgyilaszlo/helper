@@ -152,10 +152,13 @@
             self::e( get_class( $class ) );
         }
 
-        public static function reflectionClassisUserDefined($className) : void
+        /**
+         * Class is user defined ? => "Palvoelgyi\Helper\Helper"
+         */
+        public static function reflectionClassisUserDefined( $className, $stop = 1 ) : void
         {
             $class = new \ReflectionClass($className);
-            self::e($class->isUserDefined());
+            self::e( $class->isUserDefined(),$stop );
         }
 
         public static function getSelfMethodes() : void

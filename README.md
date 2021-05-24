@@ -5,8 +5,8 @@ and at the same time to mark the exact position of the output.
 
  Methods:
 
-# Everything is structured and easy to read again
-    Helper::e($variable);
+# Everything is structured and easy to read again. $stop = true/false
+    Helper::e( $variable, $stop );
 # Returns all declared classes
     Helper::getClasses();
 # Returns all methods of a class
@@ -23,3 +23,5 @@ and at the same time to mark the exact position of the output.
     Helper::timeStop();
 # Output time measurement duration
     Helper::getDuration();
+# Is the class user defined?
+    Helper::reflectionClassisUserDefined('Palvoelgyi\Helper\Helper',0);
