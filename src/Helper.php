@@ -6,8 +6,11 @@
 
     class Helper
     {
-        private static $start; 
-        private static $duration;
+        /**  @var string */
+        private static string $start;
+
+        /**  @var string */
+        private static string $duration;
 
         public function __construct()
         {
@@ -18,8 +21,6 @@
          */
         public static function e( $string = '', $stop = 1, $strDesc = null, $boolDump = false )
         {
-            // if (empty($string)) { exit; }
-
             echo '
                 <style>
         
@@ -130,16 +131,15 @@
         /**
          * Output declared classes
          */
-        public static function getClasses( $stop = 1 )
+        public static function getClasses( $stop = 1 ) : void
         {
-
             self::e( get_declared_classes(), $stop );
         }
 
         /**
          * Output all methods a declared class
          */
-        public static function getClassMethod( $class, $stop = 1 )
+        public static function getClassMethod( $class, $stop = 1 ) : void
         {
             self::e( get_class_methods( $class ), $stop );
         }
@@ -147,24 +147,23 @@
         /**
          * Output class name
          */
-        public static function getClassName( $class, $stop = 1 )
+        public static function getClassName( $class, $stop = 1 ) : void
         {
-
             self::e( get_class( $class ) );
         }
 
-        public static function reflectionClassisUserDefined($className)
+        public static function reflectionClassisUserDefined($className) : void
         {
             $class = new \ReflectionClass($className);
             self::e($class->isUserDefined());
         }
 
-        public static function getSelfMethodes()
+        public static function getSelfMethodes() : void
         {
             self::getClassMethod('Helper');
         }
 
-        public static function arrayObject()
+        public static function arrayObject() : void
         {
             self::e('
             https://www.php.net/manual/de/class.arrayobject.php
@@ -205,21 +204,18 @@
             ');
         }
 
-        public static function timeStart()
+        public static function timeStart() : void
         {
             self::$start = microtime(true);
-
         }
 
-        public static function timeStop()
+        public static function timeStop() : void
         {
             self::$duration = microtime(true) - self::$start; 
-
         }
 
-        public static function getDuration()
+        public static function getDuration() : string
         {
            return self::$duration;
-
         }
     }
