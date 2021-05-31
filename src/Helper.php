@@ -7,10 +7,10 @@
     class Helper
     {
         /**  @var string */
-        private static string $start;
+        private static $start;
 
         /**  @var string */
-        private static string $duration;
+        private static $duration;
 
         public function __construct()
         {
