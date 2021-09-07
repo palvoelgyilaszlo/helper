@@ -2,7 +2,7 @@
 
     declare(strict_types = 1);
 
-    namespace Palvoelgyi\Helper;
+    namespace Palvoelgyi;
 
     class Helper
     {
