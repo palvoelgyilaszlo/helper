@@ -1,19 +1,19 @@
 {
-    "name": "palvoelgyilaszlo/helper",
-    "description": "help for php programming",
-    "type": "library",
-    "license": "MIT",
-    "minimum-stability": "dev",
-    "authors": [
-      {
-          "name": "palvoelgyilaszlo",
-          "email": "l.palvoelgyi@gmail.com"
-      }
-    ],
-    "require": {},
-    "autoload": {
-      "psr-4": {
-        "Palvoelgyi\\Helper\\": "src/"
-      }
+  "name": "palvoelgyilaszlo/helper",
+  "description": "help for php programming",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "palvoelgyilaszlo",
+      "email": "l.palvoelgyi@gmail.com"
     }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Palvoelgyi\\": "src/"
+    }
+  }
 }
