@@ -221,4 +221,6 @@
         {
            return self::$duration;
         }
+
+        # Weitere funktionen
     }
